@@ -16,7 +16,10 @@ The project demonstrates frontend architecture, state management, role-based per
 
 ### Meeting Requests
 
-![Meeting Requests](docs/screenshots/meetings.png)
+![Meeting Requests](docs/screenshots/meeting-requests.png)
+
+### Login Page
+![Login Page](docs/screenshots/login_page.png)
 
 ## Features
 
