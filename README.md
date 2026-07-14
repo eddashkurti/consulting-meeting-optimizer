@@ -1,41 +1,57 @@
 # Consulting Meeting Optimizer
 
-A role-based React application designed to improve task coordination, meeting management, workload visibility, and team collaboration in consulting environments.
+Consulting Meeting Optimizer is a role-based project management and meeting coordination application built with React and Vite. It centralizes task management, meeting approval workflows, workload visibility and team collaboration into a single interface designed for consulting teams.
 
-The application combines task tracking, meeting approval workflows, workload monitoring, and team analytics in one interface.
+The project demonstrates frontend architecture, state management, role-based permissions and business workflow implementation through a realistic consulting environment.
+
+## Preview
+
+### Dashboard
+
+![Dashboard](docs/screenshots/dashboard.png)
+
+### Task Board
+
+![Task Board](docs/screenshots/kanban.png)
+
+### Meeting Requests
+
+![Meeting Requests](docs/screenshots/meetings.png)
 
 ## Features
 
-- Role-based access for team members, team leads, project leads, and administrators
-- Kanban task board with drag-and-drop functionality
-- Work-in-progress limits for task management
-- Task assignment and workload balancing
-- Meeting request submission and approval workflows
-- Meeting notes and action-item tracking
-- Calendar view for meetings and tasks
-- Team and individual task dashboards
-- Analytics for workload and team activity
-- Responsive navigation for desktop and mobile devices
-- Demo authentication and local data persistence
+- Role-based access control
+- Drag-and-drop Kanban task board
+- Work-in-progress (WIP) limits
+- Intelligent task assignment suggestions
+- Meeting request approval workflow
+- Meeting notes and action item tracking
+- Calendar overview
+- Team workload visualization
+- Analytics dashboard
+- Responsive desktop and mobile interface
+- Local data persistence for demonstration purposes
 
 ## User Roles
 
-The application provides different permissions and workflows depending on the selected role:
+The application supports four user roles with different permissions:
 
-- **Team Member** — views and manages assigned tasks
-- **Team Lead** — manages team tasks and meeting requests
-- **Project Lead** — oversees project-level activity and approvals
-- **Administrator** — has broader access to teams and application data
+| Role | Responsibilities |
+|------|------------------|
+| Administrator | Full application management and oversight |
+| Project Lead | Project supervision, approvals and reporting |
+| Team Lead | Team coordination and meeting management |
+| Team Member | Task execution and personal workload management |
 
-## Tech Stack
+## Technology Stack
 
 - React
-- JavaScript
+- JavaScript (ES Modules)
 - Vite
 - Tailwind CSS
 - React Context API
-- `@hello-pangea/dnd`
-- Browser Local Storage
+- @hello-pangea/dnd
+- Local Storage
 
 ## Project Structure
 
@@ -45,88 +61,83 @@ src/
 │   ├── FocusMode/
 │   ├── Layout/
 │   ├── Tasks/
-│   └── shared application components
+│   └── shared/
 ├── context/
-│   └── AppContext.jsx
 ├── data/
-│   └── mockData.js
 ├── pages/
-│   ├── Analytics.jsx
-│   ├── Calendar.jsx
-│   ├── Dashboard.jsx
-│   ├── Login.jsx
-│   ├── MeetingNotes.jsx
-│   ├── MeetingRequests.jsx
-│   ├── MyTasks.jsx
-│   ├── TeamBoard.jsx
-│   └── Teams.jsx
 ├── utils/
-│   ├── meetingRules.js
-│   ├── permissions.js
-│   └── workload.js
 ├── App.jsx
 ├── index.css
 └── main.jsx
 ```
 
-## Running the Project Locally
+## Getting Started
 
-Clone the repository:
+### Clone the repository
 
 ```bash
 git clone https://github.com/eddashkurti/consulting-meeting-optimizer.git
 ```
 
-Open the project directory:
-
-```bash
-cd consulting-meeting-optimizer
-```
-
-Install the dependencies:
+### Install dependencies
 
 ```bash
 npm install
 ```
 
-Start the development server:
+### Start the development server
 
 ```bash
 npm run dev
 ```
 
-Open the local URL displayed in the terminal.
-
-## Production Build
-
-Create a production build:
+### Build for production
 
 ```bash
 npm run build
 ```
 
-Preview the production build locally:
+### Preview the production build
 
 ```bash
 npm run preview
 ```
 
-## Demo Data
+## Demo Environment
 
-This project currently uses mock organizational data and simulated user accounts.
+The application uses mock organizational data and simulated authentication.
 
-Authentication is intended for demonstration purposes and is not connected to a production authentication provider. Application data is stored locally in the browser rather than in an external database.
+User roles are provided for demonstration purposes, allowing different workflows and permissions to be explored without requiring a backend service.
 
-## Core Workflow
+Application data is stored locally using the browser's Local Storage.
 
-1. A user signs in using one of the available demo roles.
-2. Tasks are created, assigned, and managed through the task board.
-3. Work-in-progress limits help prevent excessive active workloads.
-4. Meeting requests are submitted for review.
-5. Authorized users approve or reject meeting requests.
-6. Meeting notes can be recorded and converted into follow-up actions.
-7. Dashboards and analytics provide visibility into workload and activity.
+## Application Workflow
+
+1. Authenticate using one of the available demo roles.
+2. View personal and team dashboards.
+3. Create, assign and manage tasks through the Kanban board.
+4. Monitor workload using WIP limits and analytics.
+5. Submit meeting requests.
+6. Approve or reject meetings based on user permissions.
+7. Record meeting notes and generate follow-up actions.
+
+## Future Improvements
+
+- Backend API integration
+- Database persistence
+- Secure authentication
+- Real-time collaboration
+- Email and calendar integration
+- Notifications and reminders
+- AI-assisted meeting scheduling
+- Docker deployment
 
 ## Author
 
 **Edda Shkurti**
+
+GitHub: https://github.com/eddashkurti
+
+## License
+
+This project is licensed under the MIT License.
